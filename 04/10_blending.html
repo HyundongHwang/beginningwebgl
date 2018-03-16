@@ -7,12 +7,12 @@
 			canvas{ background-color: white; }
 		</style>
         <script src="//code.jquery.com/jquery.min.js"></script>
-		<script src="/beginningwebgl/code/lib/raf_polyfill.js"></script>
-		<script src="/beginningwebgl/code/lib/gl-matrix-min.js"></script>
-		<script src="/beginningwebgl/code/lib/webgl-debug.js"></script>
-		<script src="/beginningwebgl/code/04/vector3.js"></script>		
-		<script src="/beginningwebgl/code/04/sphere_mesh.js"></script>
-		<script src="/beginningwebgl/code/04/plane_mesh.js"></script>	
+		<script src="../lib/raf_polyfill.js"></script>
+		<script src="../lib/gl-matrix-min.js"></script>
+		<script src="../lib/webgl-debug.js"></script>
+		<script src="../04/vector3.js"></script>		
+		<script src="../04/sphere_mesh.js"></script>
+		<script src="../04/plane_mesh.js"></script>	
 		<script>
 			var gl = null,
 				canvas = null,
@@ -112,7 +112,7 @@
 				//get shader sources with jQuery Ajax
 				$.ajax({
 				    async: false,
-				    url: '/beginningwebgl/code/04/10_blending.vs',
+				    url: '../04/10_blending.vs',
 				    success: function (data) {
 				        vs_source = data.firstChild.textContent;
 				    },
@@ -121,7 +121,7 @@
 
 				$.ajax({
 				    async: false,
-				    url: '/beginningwebgl/code/04/10_blending.fs',
+				    url: '../04/10_blending.fs',
 				    success: function (data) {
 				        fs_source = data.firstChild.textContent;
 				    },

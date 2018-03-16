@@ -7,12 +7,12 @@
 			canvas{ background-color: white; }
 		</style>
         <script src="//code.jquery.com/jquery.min.js"></script>
-		<script src="/beginningwebgl/code/lib/raf_polyfill.js"></script>
-		<script src="/beginningwebgl/code/lib/gl-matrix-min.js"></script>
-		<script src="/beginningwebgl/code/lib/webgl-debug.js"></script>
-		<script src="/beginningwebgl/code/04/vector3.js"></script>		
-		<script src="/beginningwebgl/code/04/sphere_mesh.js"></script>
-		<script src="/beginningwebgl/code/04/plane_mesh.js"></script>		
+		<script src="../lib/raf_polyfill.js"></script>
+		<script src="../lib/gl-matrix-min.js"></script>
+		<script src="../lib/webgl-debug.js"></script>
+		<script src="../04/vector3.js"></script>		
+		<script src="../04/sphere_mesh.js"></script>
+		<script src="../04/plane_mesh.js"></script>		
 		<script>
 			var gl = null,
 				canvas = null,
@@ -60,21 +60,21 @@
 			    	setupTexture(STONE_TEXTURE);
 					gl.uniform1i(glProgram.samplerUniform, STONE_TEXTURE);
 				}
-				textureImage[STONE_TEXTURE].src = "/beginningwebgl/code/textures/stone-256px.jpg";
+				textureImage[STONE_TEXTURE].src = "../textures/stone-256px.jpg";
 
 				textureImage[WATER_TEXTURE] = new Image();
 				textureImage[WATER_TEXTURE].onload = function() {
 			    	setupTexture(WATER_TEXTURE);
 			    	gl.uniform1i(glProgram.samplerUniform, WATER_TEXTURE);
 				}
-				textureImage[WATER_TEXTURE].src = "/beginningwebgl/code/textures/water-256px.jpg";
+				textureImage[WATER_TEXTURE].src = "../textures/water-256px.jpg";
 
 				textureImage[GLASS_TEXTURE] = new Image();
 				textureImage[GLASS_TEXTURE].onload = function() {
 			    	setupTexture(GLASS_TEXTURE);
 			    	gl.uniform1i(glProgram.samplerUniform, GLASS_TEXTURE);
 				}
-				textureImage[GLASS_TEXTURE].src = "/beginningwebgl/code/textures/glass-256px.jpg";                                   	
+				textureImage[GLASS_TEXTURE].src = "../textures/glass-256px.jpg";                                   	
 			}
 
 			function setupTexture(i)	

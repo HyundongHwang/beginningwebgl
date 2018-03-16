@@ -7,7 +7,7 @@
 			canvas{ background-color: white; }
 		</style>
         <script src="//code.jquery.com/jquery.min.js"></script>
-		<script src="/beginningwebgl/code/lib/three.js/build/three.js"></script>
+		<script src="../lib/three.js/build/three.js"></script>
 		<script>
 			var CANVAS_WIDTH = 400,
 				CANVAS_HEIGHT= 300;
@@ -50,10 +50,10 @@
 			function setupTexture()
 			{
 				texture[STONE_TEXTURE] = THREE.ImageUtils.loadTexture(
-						"/beginningwebgl/code/textures/stone-128px.jpg",
+						"../textures/stone-128px.jpg",
 						{}, function() {
 						texture[WEBGL_LOGO_TEXTURE] = THREE.ImageUtils.loadTexture(
-							"/beginningwebgl/code/textures/webgl_logo-512px.png",
+							"../textures/webgl_logo-512px.png",
 							{}, function() {
 								for(var i=0; i<texture.length;++i)
 								{

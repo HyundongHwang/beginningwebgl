@@ -7,8 +7,8 @@
 			canvas{ background-color: white; }
 		</style>
         <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-		<script src="/beginningwebgl/code/lib/raf_polyfill.js"></script>
-		<script src="/beginningwebgl/code/lib/gl-matrix-min.js"></script>
+		<script src="../lib/raf_polyfill.js"></script>
+		<script src="../lib/gl-matrix-min.js"></script>
 		<script>
 			var gl = null,
 				canvas = null,
@@ -25,7 +25,7 @@
 		    function loadTexture()
 			{
 				textureImage = new Image();				
-				textureImage.src = "/beginningwebgl/code/textures/smiley-128px.png";
+				textureImage.src = "../textures/smiley-128px.png";
 			}
 
 			function setupTexture()

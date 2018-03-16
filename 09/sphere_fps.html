@@ -7,10 +7,10 @@
 			canvas{ background-color: white; }
 		</style>
         <script src="//code.jquery.com/jquery.min.js"></script>
-		<script src="/beginningwebgl/code/lib/webgl-debug.js"></script>
-		<script src="/beginningwebgl/code/lib/gl-matrix-min.js"></script>
-		<script src="/beginningwebgl/code/lib/raf_polyfill.js"></script>
-		<script src="/beginningwebgl/code/lib/Stats.js"></script>
+		<script src="../lib/webgl-debug.js"></script>
+		<script src="../lib/gl-matrix-min.js"></script>
+		<script src="../lib/raf_polyfill.js"></script>
+		<script src="../lib/Stats.js"></script>
 		<script>
 			var gl = null,
 				canvas = null,
@@ -69,14 +69,14 @@
 			    	setupTexture(STONE_TEXTURE);
 					gl.uniform1i(glProgram.samplerUniform, STONE_TEXTURE);
 				}
-				textureImage[STONE_TEXTURE].src = "/beginningwebgl/code/textures/stone-128px.jpg";
+				textureImage[STONE_TEXTURE].src = "../textures/stone-128px.jpg";
 
 				textureImage[WEBGL_LOGO_TEXTURE] = new Image();
 				textureImage[WEBGL_LOGO_TEXTURE].onload = function() {
 			    	setupTexture(WEBGL_LOGO_TEXTURE);
 			    	gl.uniform1i(glProgram.samplerUniform2, WEBGL_LOGO_TEXTURE);
 				}
-				textureImage[WEBGL_LOGO_TEXTURE].src = "/beginningwebgl/code/textures/webgl_logo-512px.png";
+				textureImage[WEBGL_LOGO_TEXTURE].src = "../textures/webgl_logo-512px.png";
 
                 glProgram.uDoTexturing = gl.getUniformLocation(glProgram, "uDoTexturing");          		
                	gl.uniform1i(glProgram.uDoTexturing, 1);	                    	

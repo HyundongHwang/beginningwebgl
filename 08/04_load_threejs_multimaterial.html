@@ -6,7 +6,7 @@
 			body{ background-color: grey; }
 			canvas{ background-color: white; }
 		</style>
-		<script src="/beginningwebgl/code/lib/three.js/build/three.js"></></script>
+		<script src="../lib/three.js/build/three.js"></></script>
 		<script>
 			var CANVAS_WIDTH = 400,
 				CANVAS_HEIGHT= 300;
@@ -56,7 +56,7 @@
 			function addDuckMesh()
 			{
 				var loader = new THREE.JSONLoader();
-				loader.load("/beginningwebgl/code/meshes/duck_three.js", function(geometry){
+				loader.load("../meshes/duck_three.js", function(geometry){
 					var materials = [
 						geometry.materials[0],
 						new THREE.MeshBasicMaterial( 
