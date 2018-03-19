@@ -1,0 +1,503 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF564D78-0295-4B1F-9DD3-BE1EAD38A4D1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>beginningwebglVsProj</RootNamespace>
+    <AssemblyName>beginningwebglVsProj</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="02\shader.fs" />
+    <Content Include="02\shader.vs" />
+    <Content Include="03\ambient_and_directional_light.fs" />
+    <Content Include="03\ambient_and_directional_light.vs" />
+    <Content Include="03\basic-texture.fs" />
+    <Content Include="03\basic-texture.vs" />
+    <Content Include="03\multitexture.fs" />
+    <Content Include="03\multitexture.vs" />
+    <Content Include="03\point_light.fs" />
+    <Content Include="03\point_light.vs" />
+    <Content Include="03\texture-attribute.vs" />
+    <Content Include="03\texture_and_lighting.fs" />
+    <Content Include="03\texture_and_lighting.vs" />
+    <Content Include="03\texture_with_toggle.fs" />
+    <Content Include="04\01_flat.fs" />
+    <Content Include="04\01_flat.vs" />
+    <Content Include="04\02_gouraud.fs" />
+    <Content Include="04\02_gouraud.vs" />
+    <Content Include="04\03_phong_lambert.fs" />
+    <Content Include="04\03_phong_lambert.vs" />
+    <Content Include="04\04_gouraud_phong.fs" />
+    <Content Include="04\04_gouraud_phong.vs" />
+    <Content Include="04\05_phong_phong.fs" />
+    <Content Include="04\05_phong_phong.vs" />
+    <Content Include="04\06_attenuation.fs" />
+    <Content Include="04\06_attenuation.vs" />
+    <Content Include="04\07_spotlight.fs" />
+    <Content Include="04\07_spotlight.vs" />
+    <Content Include="04\08_fog.fs" />
+    <Content Include="04\08_fog.vs" />
+    <Content Include="04\09_fog_spotlight.fs" />
+    <Content Include="04\09_fog_spotlight.vs" />
+    <Content Include="04\10_blending.fs" />
+    <Content Include="04\10_blending.vs" />
+    <Content Include="04\11_all_techniques.fs" />
+    <Content Include="04\11_all_techniques.vs" />
+    <Content Include="05\01_gravity.fs" />
+    <Content Include="05\01_gravity.vs" />
+    <Content Include="06\01_circles.fs" />
+    <Content Include="06\01_circles.vs" />
+    <Content Include="06\01_circle_gradient.fs" />
+    <Content Include="06\02_circles_uniforms.fs" />
+    <Content Include="06\02_circles_uniforms.vs" />
+    <Content Include="06\02_circles_uniforms_weird.fs" />
+    <Content Include="06\03_mandelbrot.vs" />
+    <Content Include="06\fractal_terrain.fs" />
+    <Content Include="06\fractal_terrain.vs" />
+    <Content Include="06\heightmap.fs" />
+    <Content Include="06\heightmap.vs" />
+    <Content Include="06\particle_systems.fs" />
+    <Content Include="06\particle_systems.vs" />
+    <Content Include="06\particle_systems_gpu.fs" />
+    <Content Include="06\particle_systems_gpu.vs" />
+    <Content Include="07\multitexture.fs" />
+    <Content Include="07\multitexture.vs" />
+    <Content Include="09\sphere.fs" />
+    <Content Include="09\sphere.vs" />
+    <Content Include="09\spheres.fs" />
+    <Content Include="09\spheres.vs" />
+    <Content Include="09\spheres_mv.fs" />
+    <Content Include="09\spheres_mv.vs" />
+    <Content Include="09\texture_and_lighting.fs" />
+    <Content Include="09\texture_and_lighting.vs" />
+    <Content Include="10\01_image_processing.fs" />
+    <Content Include="10\01_image_processing.vs" />
+    <Content Include="10\02_image_processing.fs" />
+    <Content Include="10\02_image_processing.vs" />
+    <Content Include="10\03_convolution_kernel.fs" />
+    <Content Include="10\03_convolution_kernel.vs" />
+    <Content Include="10\04_grayscale_with_color_highlight.fs" />
+    <Content Include="10\04_grayscale_with_color_highlight.vs" />
+    <Content Include="10\05_cartoon.fs" />
+    <Content Include="10\05_cartoon.vs" />
+    <Content Include="10\06_gooch_vs.fs" />
+    <Content Include="10\06_gooch_vs.vs" />
+    <Content Include="10\07_gooch_fs.fs" />
+    <Content Include="10\07_gooch_fs.vs" />
+    <Content Include="10\08_framebuffer_generation.fs" />
+    <Content Include="10\08_framebuffer_generation.vs" />
+    <Content Include="10\08_framebuffer_lookup.fs" />
+    <Content Include="10\08_framebuffer_lookup.vs" />
+    <Content Include="10\09_framebuffer_generation.fs" />
+    <Content Include="10\09_framebuffer_generation.vs" />
+    <Content Include="10\09_framebuffer_lookup.fs" />
+    <Content Include="10\09_framebuffer_lookup.vs" />
+    <Content Include="10\10_picking_generation.fs" />
+    <Content Include="10\10_picking_generation.vs" />
+    <Content Include="10\10_picking_lookup.fs" />
+    <Content Include="10\10_picking_lookup.vs" />
+    <Content Include="10\emboss.fs" />
+    <Content Include="10\scene_from_light.fs" />
+    <Content Include="10\scene_from_light.vs" />
+    <Content Include="10\shadow_lookup.fs" />
+    <Content Include="10\shadow_lookup.vs" />
+    <Content Include="10\uber.fs" />
+    <Content Include="10\uber.vs" />
+    <Content Include="extra\01_kuwahara_filter.fs" />
+    <Content Include="extra\01_kuwahara_filter.vs" />
+    <Content Include="meshes\cube_three.js" />
+    <Content Include="meshes\duckCM_fix.jpg" />
+    <Content Include="meshes\duck\duckCM_fix.jpg" />
+    <Content Include="meshes\duck\sample.jpg" />
+    <Content Include="meshes\duck_three.js" />
+    <Content Include="meshes\gorilla_three.js" />
+    <Content Include="meshes\Orca\images\texture0.jpg" />
+    <Content Include="meshes\Orca\images\texture1.jpg" />
+    <Content Include="meshes\Orca\textures.txt" />
+    <Content Include="meshes\orca_three.js" />
+    <Content Include="meshes\Taj_Mahal\images\taj_mahal_three.js" />
+    <Content Include="meshes\Taj_Mahal\images\texture0.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture0.png" />
+    <Content Include="meshes\Taj_Mahal\images\texture1.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture1.png" />
+    <Content Include="meshes\Taj_Mahal\images\texture10.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture100.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture101.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture102.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture103.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture104.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture105.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture106.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture107.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture108.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture109.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture11.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture110.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture111.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture112.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture113.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture114.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture115.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture116.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture12.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture13.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture14.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture15.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture16.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture17.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture18.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture19.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture2.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture20.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture21.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture22.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture23.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture24.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture25.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture26.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture27.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture28.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture29.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture3.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture30.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture31.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture32.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture33.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture34.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture35.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture36.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture37.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture38.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture39.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture4.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture40.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture41.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture42.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture43.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture44.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture45.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture46.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture47.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture48.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture49.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture5.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture50.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture51.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture52.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture53.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture54.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture55.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture56.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture57.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture58.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture59.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture6.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture60.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture61.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture62.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture63.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture64.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture65.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture66.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture67.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture68.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture69.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture7.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture70.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture71.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture72.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture73.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture74.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture75.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture76.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture77.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture78.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture79.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture8.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture80.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture81.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture82.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture83.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture84.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture85.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture86.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture87.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture88.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture89.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture9.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture90.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture91.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture92.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture93.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture94.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture95.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture96.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture97.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture98.jpg" />
+    <Content Include="meshes\Taj_Mahal\images\texture99.jpg" />
+    <Content Include="meshes\Taj_Mahal\textures.txt" />
+    <Content Include="meshes\taj_mahal_three.js" />
+    <Content Include="webgl2\julia-set\julia-set.html" />
+    <Content Include="webgl2\julia-set\julia-set.js" />
+    <Content Include="webgl2\webgl-debug.js" />
+    <Content Include="meshes\dolphin\doc.kml" />
+    <Content Include="meshes\dolphin\models\Dolphin.dae" />
+    <Content Include="meshes\duck\duck_triangulate.dae" />
+    <Content Include="meshes\duck\view.json" />
+    <Content Include="meshes\elephant\doc.kml" />
+    <Content Include="meshes\elephant\models\Elephant.dae" />
+    <Content Include="meshes\Gorilla\doc.kml" />
+    <Content Include="meshes\Gorilla\models\Gorilla.dae" />
+    <Content Include="meshes\Orca\doc.kml" />
+    <Content Include="meshes\Orca\models\Orca.dae" />
+    <Content Include="meshes\Taj_Mahal\doc.kml" />
+    <Content Include="meshes\Taj_Mahal\models\model.dae" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webgl2\julia-set\julia-set.fs" />
+    <Content Include="webgl2\julia-set\julia-set.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="01\2D_movement.html" />
+    <Content Include="01\3D_movement.html" />
+    <Content Include="01\colored-triangles.html" />
+    <Content Include="01\triangular_prism.html" />
+    <Content Include="01\triangular_prism_depth_test.html" />
+    <Content Include="02\shaders_load_jquery.html" />
+    <Content Include="02\shaders_load_xmlhttprequest.html" />
+    <Content Include="03\ambient_and_directional_light.html" />
+    <Content Include="03\ambient_and_directional_light_consistent_winding.html" />
+    <Content Include="03\basic_texture.html" />
+    <Content Include="03\multitexture.html" />
+    <Content Include="03\point_light.html" />
+    <Content Include="03\texture-example1-fixed.html" />
+    <Content Include="03\texture-example1-toggle.html" />
+    <Content Include="03\texture-example1.html" />
+    <Content Include="03\texture_and_lighting.html" />
+    <Content Include="04\01_flat.html" />
+    <Content Include="04\02_gouraud.html" />
+    <Content Include="04\03_phong_lambert.html" />
+    <Content Include="04\04_gouraud_phong.html" />
+    <Content Include="04\05_phong_phong.html" />
+    <Content Include="04\06_attenuation.html" />
+    <Content Include="04\07_spotlight.html" />
+    <Content Include="04\08_fog.html" />
+    <Content Include="04\09_fog_spotlight.html" />
+    <Content Include="04\10_blending.html" />
+    <Content Include="04\11_all_techniques.html" />
+    <Content Include="04\plane_mesh.js" />
+    <Content Include="04\sphere_mesh.js" />
+    <Content Include="04\vector3.js" />
+    <Content Include="05\01a_gravity.html" />
+    <Content Include="05\01b_gravity_collision_test.html" />
+    <Content Include="05\01c_gravity_collision_test_bottoms.html" />
+    <Content Include="05\01d_gravity_collision_bounce.html" />
+    <Content Include="05\01d_gravity_collision_bounce_flag_direction.html" />
+    <Content Include="05\01e_gravity_collision_bounce_repeat.html" />
+    <Content Include="05\01f_gravity_collision_bounce_repeat_and_rest.html" />
+    <Content Include="05\02_collision_detection.html" />
+    <Content Include="05\03_intercollision_detection.html" />
+    <Content Include="05\04_various_sizes_intercollision_detection.html" />
+    <Content Include="05\05_projectile.html" />
+    <Content Include="05\06_ramp.html" />
+    <Content Include="05\plane_mesh.js" />
+    <Content Include="05\SphereObject.js" />
+    <Content Include="05\sphere_mesh.js" />
+    <Content Include="05\vector3.js" />
+    <Content Include="05\WallObject.js" />
+    <Content Include="06\01_circles.html" />
+    <Content Include="06\02_circles_uniforms.html" />
+    <Content Include="06\03_mandelbrot.html" />
+    <Content Include="06\04_julia_set.html" />
+    <Content Include="06\05_mandelbrot_interactive.html" />
+    <Content Include="06\fractal_terrain.html" />
+    <Content Include="06\heightmap.html" />
+    <Content Include="06\particle.js" />
+    <Content Include="06\particle_system.html" />
+    <Content Include="06\particle_system_gpu.html" />
+    <Content Include="07\all_techniques.html" />
+    <Content Include="07\basic_lighting.html" />
+    <Content Include="07\basic_lighting_torus.html" />
+    <Content Include="07\bowtie.html" />
+    <Content Include="07\bowtie_camera_movement.html" />
+    <Content Include="07\bowtie_color.html" />
+    <Content Include="07\tquery_cylinder.html" />
+    <Content Include="07\triangular_prism.html" />
+    <Content Include="07\triangular_prism_textured.html" />
+    <Content Include="07\triangular_prism_textured_decal.html" />
+    <Content Include="08\01_philogl_cube.html" />
+    <Content Include="08\02_glge_cube.html" />
+    <Content Include="08\02_glge_scene.xml" />
+    <Content Include="08\03_load_threejs.html" />
+    <Content Include="08\04_load_threejs_multimaterial.html" />
+    <Content Include="08\05_glge_collada.html" />
+    <Content Include="08\05_glge_scene_collada.xml" />
+    <Content Include="08\05_glge_scene_collada2.xml" />
+    <Content Include="08\05_glge_scene_collada3.xml" />
+    <Content Include="08\06_three_physi.html" />
+    <Content Include="09\debug_and_fps.html" />
+    <Content Include="09\optimized_1_removed_redundancies.html" />
+    <Content Include="09\optimized_2_interleaved.html" />
+    <Content Include="09\optimized_3_texture_atlas.html" />
+    <Content Include="09\optimized_4_limit_trig_calls.html" />
+    <Content Include="09\optimized_5_draw_calls_modelview.html" />
+    <Content Include="09\optimized_6_calc_sphere_once.html" />
+    <Content Include="09\optimized_6_calc_sphere_once_erroneous_but_cool.html" />
+    <Content Include="09\sphere-meshes.js" />
+    <Content Include="09\spheres_original.html" />
+    <Content Include="09\sphere_fps.html" />
+    <Content Include="09\texture_and_lighting_debug.html" />
+    <Content Include="10\01_image_processing.html" />
+    <Content Include="10\02_image_processing.html" />
+    <Content Include="10\03_convolution_kernel.html" />
+    <Content Include="10\04_grayscale_with_color_highlight.html" />
+    <Content Include="10\05_cartoon.html" />
+    <Content Include="10\06_gooch_vs.html" />
+    <Content Include="10\07_gooch_fs.html" />
+    <Content Include="10\08_framebuffer_lookup.html" />
+    <Content Include="10\09_framebuffer_with_depth.html" />
+    <Content Include="10\10_picking.html" />
+    <Content Include="10\11_picking_moving.html" />
+    <Content Include="10\12_shadow.html" />
+    <Content Include="10\13_all_techniques.html" />
+    <Content Include="10\emboss.html" />
+    <Content Include="10\plane_mesh.js" />
+    <Content Include="10\sphere_mesh.js" />
+    <Content Include="10\test_postal.php" />
+    <Content Include="10\vector3.js" />
+    <Content Include="extra\01_kuwahara_filter.html" />
+    <Content Include="lib\gl-matrix-min.js" />
+    <Content Include="lib\gl-matrix.js" />
+    <Content Include="lib\raf_polyfill.js" />
+    <Content Include="lib\Stats.js" />
+    <Content Include="lib\webgl-debug.js" />
+    <Content Include="textures\bear-256px.jpg" />
+    <Content Include="textures\dog-128px.jpg" />
+    <Content Include="textures\dog_npot.jpg" />
+    <Content Include="textures\earth.jpg" />
+    <Content Include="textures\glass-256px.jpg" />
+    <Content Include="textures\hf-512px.jpg" />
+    <Content Include="textures\jupiter.jpg" />
+    <Content Include="textures\mars.jpg" />
+    <Content Include="textures\moon.jpg" />
+    <Content Include="textures\orange-texture.jpg" />
+    <Content Include="textures\rose-512px.jpg" />
+    <Content Include="textures\saturn.jpg" />
+    <Content Include="textures\smiley-128px.png" />
+    <Content Include="textures\stone-128px.jpg" />
+    <Content Include="textures\stone-256px.jpg" />
+    <Content Include="textures\sun.png" />
+    <Content Include="textures\tennisball-texture.jpg" />
+    <Content Include="textures\texture_atlas.jpg" />
+    <Content Include="textures\unemboss.jpg" />
+    <Content Include="textures\water-256px.jpg" />
+    <Content Include="textures\webgl_logo-512px.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56521</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56521/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

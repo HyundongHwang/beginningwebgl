@@ -1,3 +1,6 @@
 .idea
 npm-debug.log
 *.log
+
+**/.vs/**
+**/packages/**
