@@ -10,6 +10,8 @@
 		<script src="../lib/raf_polyfill.js"></script>
 		<script src="../lib/gl-matrix-min.js"></script>
 		<script>
+            "use strict;"
+
 			var gl = null,
 				canvas = null,
 				glProgram = null,
@@ -137,11 +139,11 @@
 			}
 			
 			function initShaders()
-			{
+            {
 				//get shader sources with jQuery Ajax
-				$.ajax({
-				    async: false,
-				    url: './multitexture.vs',
+                $.ajax({
+                    async: false,
+                    url: './multitexture.vs',
 				    success: function (data) {
 				        vs_source = data.firstChild.textContent;
 				    },
@@ -150,7 +152,7 @@
 
 				$.ajax({
 				    async: false,
-				    url: './multitexture.fs',
+                    url: './multitexture.fs',
 				    success: function (data) {
 				        fs_source = data.firstChild.textContent;
 				    },
