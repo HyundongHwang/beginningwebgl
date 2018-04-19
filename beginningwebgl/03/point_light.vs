@@ -13,9 +13,9 @@
 		gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
        
 		//lighting
-        vec3 ambientLight = vec3(0.1, 0.1, 0.1);       
+        vec3 ambientLight = vec3(0.1, 0.1, 0.1);
 
-        vec3 pointLightPosition = vec3(1.0,2.0,-1.0);
+        vec3 pointLightPosition = vec3(1.0,2.0,1.0);
         vec3 pointLightDirection = normalize(vec3(pointLightPosition.xyz - aVertexPosition.xyz));
 
         vec3 L = vec3(uPMatrix * uMVMatrix * vec4(pointLightDirection, 1.0));

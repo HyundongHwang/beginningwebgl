@@ -86,7 +86,7 @@
 				gl.viewport(0, 0, canvas.width, canvas.height);
 				mat4.perspective(45, canvas.width / canvas.height, 0.1, 100.0, pMatrix);
 				mat4.identity(mvMatrix);
-				mat4.translate(mvMatrix, [0.0, -1.0, -5.5]);              
+				mat4.translate(mvMatrix, [0.0, -2, -7.5]);              
 				mat4.rotate(mvMatrix, angle, [0.0, 1.0, 0.0]);              
 				
 				mat4.toInverseMat3(mvMatrix, normalMatrix);

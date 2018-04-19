@@ -93,13 +93,13 @@
 					mat4.perspective(45, canvas.width / canvas.height, 0.1, 100.0, pMatrix);
 					gl.uniformMatrix4fv(glProgram.pMatrixUniform, false, pMatrix);
 					
-					(function animLoop(){
-						if( !paused ){	
+					//(function animLoop(){
+					//	if( !paused ){	
 							setupWebGL();
 							drawScene(); 
-						}
-						requestAnimationFrame(animLoop, canvas);
-					})();
+					//	}
+					//	requestAnimationFrame(animLoop, canvas);
+					//})();
 				}else{	
 					alert(  "Error: Your browser does not appear to support WebGL.");
 				}
